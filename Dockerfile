@@ -1,9 +1,18 @@
 FROM sparklyballs/base-vanilla-alpine
 MAINTAINER sparklyballs
-ARG APKLIST="git nano nginx openssl php php-cli php-json php-fpm"
 
 # install packages
-RUN apk add --update $APKLIST && \
+RUN apk add --no-cache \
+	git \
+	nano \
+	nginx \
+	openssl \
+	php \
+	php-cli \
+	php-json \
+	php-fpm && \
+
+# cleanup
 rm -rf /var/cache/apk/*
 
 COPY root/ /

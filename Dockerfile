@@ -2,7 +2,8 @@ FROM sparklyballs/base-vanilla-alpine
 MAINTAINER sparklyballs
 
 # install packages
-RUN apk add --no-cache \
+RUN \
+apk add --no-cache \
 	git \
 	nano \
 	nginx \

@@ -8,10 +8,10 @@ apk add --no-cache \
 	nano \
 	nginx \
 	openssl \
-	php \
-	php-cli \
-	php-json \
-	php-fpm && \
+	php5 \
+	php5-cli \
+	php5-json \
+	php5-fpm && \
 
 # cleanup
 rm -rf /var/cache/apk/*
